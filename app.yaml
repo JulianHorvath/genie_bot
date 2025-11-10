@@ -6,14 +6,14 @@ command:
   - genie_bot.py
 
 env:
-- name: "GENIE_SPACE" # Genie Space ID
-  valueFrom: "genie-space" # valueFrom recovers the value stored in the App's resources configuration
-- name: "DATABRICKS_HOST"
-  valueFrom: "databricks-host"
-- name: "DATABRICKS_TOKEN"
-  valueFrom: "databricks-token"
+  - name: "GENIE_SPACE" # Genie Space ID
+    valueFrom: "genie-space" # valueFrom recovers the value stored in the App's resources configuration
+  - name: "DATABRICKS_HOST"
+    valueFrom: "databricks-host"
+  - name: "DATABRICKS_TOKEN"
+    valueFrom: "databricks-token"
 
-#- name: "SERVING_ENDPOINT_NAME"
-#  valueFrom: "serving-endpoint"
-#- name: "UC_VOLUME"
-#  valueFrom: "uc-volume"
+# - name: "SERVING_ENDPOINT_NAME"
+#   valueFrom: "serving-endpoint"
+# - name: "UC_VOLUME"
+#   valueFrom: "uc-volume"
