@@ -1,8 +1,9 @@
 # This is the configuration file for the Genie Bot application within production environment (Databricks Apps).
 # This is for manual deployment via UI.
 command:
-- "python"
-- "genie_bot.py"
+  - streamlit
+  - run
+  - genie_bot.py
 
 env:
 - name: "GENIE_SPACE" # Genie Space ID
