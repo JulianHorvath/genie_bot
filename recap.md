@@ -14,7 +14,7 @@ As soon as you got it, something new is born. Then implementation is just a matt
 
 How we tried to accomplish ours? There is a pretty ilustrative image that highlights some essential components behind a well executed digital product:
 
-![Digital Product Backbone](https://github.com/JulianHorvath/genie_bot/blob/main/assets/Digital_Product_Backbone.png)
+![Digital Product Backbone](assets/Digital_Product_Backbone.png)
 
 They were handled as follows:
 
@@ -22,7 +22,7 @@ They were handled as follows:
 * LLM: Genie underlying Serving End Point.
 * Communication: Databricks Python SDK.
 * Authentication: Databricks Personal Access Token.
-* UX/UI: Streamlit and Genie features. ![Open sample](https://github.com/JulianHorvath/genie_bot/blob/main/assets/UI_Sample.png)
+* UX/UI: Streamlit and Genie features. ![Open sample](/assets/UI_Sample.png)
 * Repository: GitHub.
 * Automation: Pytest + Databricks Asset Bundles + GitHub Actions (take a look at CI_CD_notes.md file).
 * Hosting and Deployment: Databricks Apps.
@@ -69,4 +69,5 @@ They were handled as follows:
 * Vendor dependency
 * Programatic customization without permissions/accesses
 * Some latency on API calls, particularly when loading chat history
+
 * Ongoing API/SDK development can cost breaks and missfunctionalities, but this should be transitory
