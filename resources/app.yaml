@@ -1,0 +1,19 @@
+resources:
+  apps:
+    genie_bot_app:
+      name: "genie_bot_app"
+      source_code_path: .
+      description: "A Streamlit Chatbot to interact with Genie data."
+
+      resources:
+        - name: "genie-space"
+          description: "Genie space for the data chat app"
+          genie_space_spec:
+            id: # The Genie Space ID
+            permission: "CAN_RUN"
+
+      user_api_scopes:
+        - serving.serving-endpoints
+        - dashboards.genie
+        - files.files
+        - sql
