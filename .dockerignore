@@ -1,0 +1,18 @@
+# Ignore virtual environments 
+genie_env/
+
+# Python caches
+__pycache__/
+.pytest_cache/
+tests/__pycache__/
+tests_integration/__pycache__/
+
+# IDE and editor files
+.vscode/
+
+# Secrets and credentials
+.env
+
+# Others
+.gitignore
+Dockerize_app.txt

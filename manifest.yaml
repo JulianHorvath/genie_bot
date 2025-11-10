@@ -1,0 +1,23 @@
+# This file helps define resources and scopes if deployed using UI
+version: 1
+name: "conversational-genie-agent"
+description: "Interact with your data using natural language powered by Genie."
+
+resource_specs:
+  - name: "serving-endpoint"
+    description: "Serving endpoint for the data chat app"
+    serving_endpoint_spec:
+      permission: "CAN_QUERY"
+  - name: "genie-space"
+    description: "Genie space for the data chat app"
+    genie_space_spec:
+      permission: "CAN_RUN"
+  - name: "uc-volume"
+    description: "UC Volume for the data chat app"
+    uc_volume_spec:
+      permission: "CAN_READ"
+user_api_scopes:
+  - serving.serving-endpoints
+  - dashboards.genie
+  - files.files
+  - sql

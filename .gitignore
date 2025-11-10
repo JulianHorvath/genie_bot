@@ -1,0 +1,18 @@
+# Virtual environment
+genie_env/
+
+# Python caches
+__pycache__/
+.pytest_cache/
+tests/__pycache__/
+tests_integration/__pycache__/
+
+# IDE / editor
+.vscode/
+
+# Secrets and credentials
+.env
+
+# Others
+Dockerize_app.txt
+.github/

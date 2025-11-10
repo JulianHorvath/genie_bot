@@ -1,0 +1,8 @@
+# python==3.13.7
+databricks-sdk==0.67.0
+databricks-cli
+streamlit==1.50.0
+pandas==2.3.2
+python-dotenv
+pytest
+ruff==0.14.2

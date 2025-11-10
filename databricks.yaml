@@ -1,0 +1,29 @@
+bundle:
+  name: genie_bot_DAB
+
+include:
+  - resources/*.yaml
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://xxx-xxxxxxxx-xxxx.cloud.databricks.com/ # replace with your DATABRICKS_HOST
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target} # bundle folder within current_user
+    resources:
+      apps:
+        genie_bot_app:
+          name: "genie_bot_app_dev"
+          source_code_path: . # the app script is stored in repository root
+    permissions:
+      - user_name: ${workspace.current_user.userName}
+        level: CAN_MANAGE
+  prod:
+    mode: production
+    workspace:
+      host: https://xxx-xxxxxxxx-xxxx.cloud.databricks.com/
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    permissions:
+      - user_name: ${workspace.current_user.userName}
+        level: CAN_MANAGE
