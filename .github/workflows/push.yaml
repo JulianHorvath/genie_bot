@@ -1,0 +1,41 @@
+name: Push
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint with ruff
+        uses: astral-sh/ruff-action@v3
+        with:
+          src: >-
+            ./genie_room.py
+            ./genie_bot.py
+
+      - name: Run tests
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          GENIE_SPACE: ${{ secrets.GENIE_SPACE_TEST }} # Use a separate test space
+        run: |
+          python -m pytest ./tests -v
+          python -m pytest ./tests_integration -v
