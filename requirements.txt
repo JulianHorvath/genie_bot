@@ -1,8 +1,9 @@
 # python==3.13.7
 databricks-sdk==0.67.0
 databricks-cli
+databricks-sql-connector==4.1.4
 streamlit==1.50.0
-pandas==2.3.2
-python-dotenv
-pytest
+pandas==2.2.3
+python-dotenv==1.2.1
+pytest==8.4.2
 ruff==0.14.2

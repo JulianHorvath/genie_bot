@@ -5,3 +5,6 @@ backgroundColor = "#ffffffff"
 secondaryBackgroundColor = "#ffffff"
 textColor = "#000000ff"
 font = "sans serif"
+
+[server]
+maxMessageSize = 400
